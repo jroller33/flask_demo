@@ -21,7 +21,7 @@ def hello_there(name):
     now = datetime.now()
     formatted_now = now.strftime("%A, %d %B, %Y at %X")
     
-    # filter name arg to letters only using regex.
+    # filter name arg to letters only using regex (so user can't paste HTML etc)
     # URL args can contain any text, so restrict to safe chars only
     
     match_object = re.match("[a-zA-Z]+", name)
