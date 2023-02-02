@@ -12,7 +12,11 @@ app = Flask(__name__)   # creates an instance of FLask
 
 @app.route("/")
 def home():
-    return "flask is working"
+    return render_template("home.html")
+
+@app.route("/about/")
+def about():
+    return render_template("about.html")
 
 
 # <name> is a variable in the URL that's passed to the fn `hello_there(name)` and can be used in the code
