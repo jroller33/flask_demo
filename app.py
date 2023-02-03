@@ -19,12 +19,11 @@ def about():
     return render_template("about.html")
 
 
-# <name> is a variable in the URL that's passed to the fn `hello_there(name)` and can be used in the code
-# http://127.0.0.1:5000/hello/john returns "Hello there john! It's Wednesday, 01 February, 2023 at 20:18:53"
 
 
 @app.route("/hello/")
 
+# <name> is a variable in the URL that's passed to the fn `hello_there(name)` and can be used in the code
 @app.route("/hello/<name>")
 def hello_there(name = None):
     return render_template(
